@@ -5,3 +5,4 @@ export MYSQL_PWD=playground
 ./manage.py ds new --type mysql --options "{\"db\": \"world_x\", \"host\": \"mysql\", \"passwd\": \"$MYSQL_PWD\", \"user\": \"root\"}" mysql_world_x
 ./manage.py ds new --type mysql --options "{\"db\": \"sakila\", \"host\": \"mysql\", \"passwd\": \"$MYSQL_PWD\", \"user\": \"root\"}" mysql_sakila
 ./manage.py ds new --type mysql --options "{\"db\": \"menagerie\", \"host\": \"mysql\", \"passwd\": \"$MYSQL_PWD\", \"user\": \"root\"}" mysql_menagerie
+./manage.py ds new --type mysql --options "{\"db\": \"employees\", \"host\": \"mysql\", \"passwd\": \"$MYSQL_PWD\", \"user\": \"root\"}" mysql_employees

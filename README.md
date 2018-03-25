@@ -22,6 +22,7 @@ $ docker-compose exec server /tmp/setup-ds.sh
 - world_x database
 - sakila database
 - menagerie database
+- employees database
 
 ## License
 
