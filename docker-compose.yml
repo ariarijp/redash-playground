@@ -42,6 +42,24 @@ services:
       MYSQL_ROOT_PASSWORD: playground
     volumes:
       - mysql:/var/lib/mysql
+  pgweb:
+    image: sosedoff/pgweb
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - 127.0.0.1:8081:8081
+    environment:
+      - DATABASE_URL=postgres://postgres@postgres/postgres?sslmode=disable
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - 127.0.0.1:8082:8081
 volumes:
   postgres:
     driver: local
